@@ -13,5 +13,14 @@
     <li>ページ表示で通知されるログにはxmailパラメータがログ通知されている事を確認する</li>
 </ul>
 <script type="text/javascript" src="https://logtest.mobylog.jp/__xdtc/500372.js"></script>
+<script type="text/javascript">
+    __cltId = "xd_sample_customer_id";
+    window.addEventListener("load", function() {
+        __disable_send_params();
+        __action = "xd_customer";
+        __push_beacon(__getURL());
+        __action = "";
+    });
+</script>
 </body>
 </html>
