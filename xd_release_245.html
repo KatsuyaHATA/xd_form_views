@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+</head>
+<body class="">
+<h1>XD_RELEASE-245確認用ページ</h1>
+<hr>
+デフォルトでCookieにSameSite属性を付ける
+<ul>
+    <li>特に指定が無い場合は、CookieにSameSite=Laxを付加する</li>
+    <li>Secure属性を指定する事も可能。その場合はSameSite=Laxは付加されんない</li>
+    <li>Secure属性を指定したい場合はQueryStringにsecure=1を指定する</li>
+</ul>
+
+<script type="text/javascript">
+if (w.location.search.match(/[\?&]secure=1/)) {
+    __enable_secure_cookie = 1;
+}
+</script>
+<script type="text/javascript" src="https://logtest.mobylog.jp/__xdtc/500372.js"></script>
+</body>
+</html>
