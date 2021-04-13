@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+</head>
+<body class="">
+<h1>XD_RELEASE-208確認用ページ</h1>
+<hr>
+[log] 会員IDに特定の値が指定されている場合は会員IDを通知しない
+<ul>
+    <li>cltIdパラメータの値が"^___.+___$"と正規表現で一致した場合は会員IDとして取り込まない</li>
+    <li>"cltId=___customer_id___"と指定した場合に会員IDがログ通知されない</li>
+    <li>"cltId=xd_sample_customer_id"と指定された場合に会員IDがログ通知される</li>
+</ul>
+<script type="text/javascript" src="https://logtest.mobylog.jp/__xdtc/850124.js"></script>
+</body>
+</html>
