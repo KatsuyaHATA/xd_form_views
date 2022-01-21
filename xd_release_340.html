@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+</head>
+<body class="">
+<h1>XD_RELEASE-340確認用ページ</h1>
+<hr>
+1to1メール内のリンクからの流入計測
+<ul>
+    <li>1to1メール本文のリンクから流入した事をログ通知する</li>
+    <li>ログ通知内容は以下のとおり<br />
+        <ul>
+            <li>アクション : action=mail1to1_landing（固定）</li>
+            <li>その他パラメータ : mail1to1_id=[XDで発行したID]</li>
+            <li>その他パラメータ : sender_hash=[メール送信ユーザのメールアドレスのsha256ハッシュ]</li>
+        </ul>
+    </li>
+    <li>アクション、カスタムパラメータともにURLのQueryStringから取得する。</li>
+    <li>必要な情報が１つでも欠けた場合はログ通知しない。</li>
+    <li>通常のページ表示時のログ通知とは別でログ通知をする。</li>
+</ul>
+<script type="text/javascript" src="https://log1.mobylog.jp/__xdtc/000122.js"></script>
+</body>
+</html>
