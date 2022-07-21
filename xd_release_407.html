@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+</head>
+<body class="">
+<h1>XD_RELEASE-407、XD_RELEASE-424確認用ページ</h1>
+<hr size="1" />
+オプトアウト機能（XD_RELEASE-407）
+<ul>
+    <li>「<a href="javascript:void(0)" onclick="xd_optout();">オプトアウト</a>」をクリック</li>
+        <ul>
+            <li>HIRAMEKI XD関連のCookieが削除されている事を確認</li>
+        </ul>
+    <li>「<a herf="xd_release_407.html">リロード</a>をクリック<br />
+        <ul>
+            <li>リロード時にログ通知がされていない事を確認</li>
+            <li>HIRAMEKI XD関連のCookieが生成されていない事を確認</li>
+        </ul>
+    </li>
+</ul>
+<br />
+<br />
+<hr size="1" />
+セッションCookieの有効期間を1時間に変更（XD_RELEASE-424）
+<ul>
+    <li>開発者ツールにてセッションIDを格納するCookieの有効期限が1時間に変更されている事を確認する</li>
+</ul>
+<br />
+<br />
+<hr size="1" />
+3rd Party Cookieの廃止（XD_RELEASE-408）
+<ul>
+    <li>開発者ツールでdot.phpのレスポンスにSet-Cookieヘッダが存在しないことを確認</li<
+    <li>開発者ツールで3rd Party Cookieは存在しないことを確認</li>
+</ul>
+<script type="text/javascript" src="https://logtest.mobylog.jp/__xdtc/850124.js"></script>
+</body>
+</html>
