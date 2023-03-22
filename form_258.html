@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+
+<script type="text/javascript">
+var l = window.location;
+var m = l.search.match(/[\?&]type=([^&]+)/);
+
+var gaDummy = function(p1,p2,p3) {
+   var result = "call : " + ((typeof(gtag) == "function") ? "gtag" : "ga")+ "<br />\n"
+      + "parameter(1) : " + p1 + "<br />\n"
+      + "parameter(2) : " + p2 + "<br />\n"
+      + "parameter(3) : " + ((typeof(gtag) == "function") ? JSON.stringify(p3) : p3)+ "<br />\n";
+   var e = document.getElementById("pushGa_result");
+   e.textContent = result;
+};
+
+if (m && m[1] == "gtag") {
+    gtag = gaDummy;
+} else
+    ga = gaDummy;
+}
+</script>
+</head>
+<body class="">
+<h1>FORM-258</h1>
+<hr>
+<div id="register-form">
+<div id="xhm-form"></div><script type="application/javascript" src="https://form.dev.xdata.jp/form.js?site_id=000122&form_id=260" charset="UTF-8" defer></script>
+<div id="xhm-form"></div>
+</div>
+<br />
+<br />
+<br />
+<hr size="1" />
+<div id="pushGa_result">
+</div>
+<br />
+<br />
+<br />
+<script type="text/javascript" src="https://logtest.mobylog.jp/__xdtc/000122.js"></script>
+</body>
+</html>
