@@ -11,9 +11,10 @@
             }
             // フォーム側から送信されたメッセージを取得するハンドラー
             form.on("message", (data) => {
+                console.log("message data : ",data);
                 const messageArea = document.getElementById("answer-message");
                 if (data?.status === "complete") {
-                    messageArea.textContent = `${data.data.name} 様<br>`
+                    messageArea.innerHTML = `${data.data.name} 様 <br>`
                       + `ご回答ありがとうございます。${data.data.email} 宛にお礼のメールをお送りしました（嘘）`;
                 } else {
                     messageArea.textContent = "";
