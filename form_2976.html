@@ -3,7 +3,24 @@
 <head>
     <meta charset="utf-8">
     <title>サイトID : 501146 : JS設定のサンプル</title>
-</script>
+    <script type="text/javascript">
+        // フォームからの通知時に呼ばれるコールバック関数の定義
+        window.xhmForm = (target, form) => {
+            if (target !== 'xhm-form') {
+                return;
+            }
+            // フォーム側から送信されたメッセージを取得するハンドラー
+            form.on("message", (data) => {
+                const messageArea = document.getElementById("answer-message");
+                if (data?.status === "complete") {
+                    messageArea.textContent = `${data.data.name} 様<br>`
+                      + `ご回答ありがとうございます。${data.data.email} 宛にお礼のメールをお送りしました（嘘）‘；
+                } else {
+                    messageArea.textContent = "";
+                }
+            });
+        };
+    </script>
 </head>
 <body class="">
   <h1>JavaScript設定のサンプル用</h1>
@@ -17,6 +34,7 @@
       defer>
     </script>
   </div>
+  <div id="answer-message" style="margin: 30px; padding: 20px;"></div>
   <script type="text/javascript" src="https://log1.mobylog.jp/__xdtc/501146.js"></script>
 </body>
 </html>
