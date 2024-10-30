@@ -14,7 +14,7 @@
                 const messageArea = document.getElementById("answer-message");
                 if (data?.status === "complete") {
                     messageArea.textContent = `${data.data.name} 様<br>`
-                      + `ご回答ありがとうございます。${data.data.email} 宛にお礼のメールをお送りしました（嘘）`；
+                      + `ご回答ありがとうございます。${data.data.email} 宛にお礼のメールをお送りしました（嘘）`;
                 } else {
                     messageArea.textContent = "";
                 }
